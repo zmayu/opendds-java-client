@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>opendds-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>opendds</groupId>
+            <artifactId>i2jrt</artifactId>
+            <version>3.15</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/i2jrt-3.15.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>opendds</groupId>
+            <artifactId>messenger_idl_test</artifactId>
+            <version>3.15</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/messenger_idl_test-3.15.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>opendds</groupId>
+            <artifactId>OpenDDS_DCPS</artifactId>
+            <version>3.15</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/OpenDDS_DCPS-3.15.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>opendds</groupId>
+            <artifactId>tao_java</artifactId>
+            <version>3.15</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/tao_java-3.15.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <target>1.8</target>
+                    <source>1.8</source>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <!-- 覆盖生成文件
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        -->
+
+    </build>
+
+</project>
